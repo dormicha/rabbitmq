@@ -1,0 +1,12 @@
+multicast is a technique that transfers packets form one source to many receivers, from a single source to many diffrence receivers , its work under the layer 3 networks , to move messages in multicast between two netwroks we will use multicast routing like groups , multicast routers ( like IGMP) , routing protocol ( like PIM) .
+
+typical use cases - like online gaming multiplayer use multicast to send game state update to multiple player at once or video straming to large scale 
+
+scenario : multiplayer online game update 
+
+game setup - the game publish a new maps for the playes 
+multicast group - the game server assigns a multicast IP address for the map update , player that logged into the game automatically join this multicast group 
+netwrok routing - multicast enabled router in the netwrok listen for IGMP messages from players device to check which players are intersted in the update.
+efficient delivery - The game server sends the map update data to the multicast group address. Multicast routers efficiently deliver this data to all players who have joined the group, ensuring that each player receives the update simultaneously and without redundant data transmission.
+player experience - all players recive the map update quickly and can immdiately start playing togther and the game is sync acroos all players 
+

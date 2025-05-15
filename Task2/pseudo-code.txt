@@ -1,6 +1,6 @@
 for monitroring the cpu usuage : 
 
-run the command top in batch on linux OS for getting a snapshot of cpu statistics 
+run the command top in bash on linux OS for getting a snapshot of cpu statistics 
 extract the ling containing CPU usuage information 
 parse the idle percentage from this line 
 calculate the active CPU usage

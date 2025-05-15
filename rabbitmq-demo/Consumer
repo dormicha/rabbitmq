@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 import pika
 import time
 
@@ -19,13 +19,13 @@ def consume_messages():
     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
     channel = connection.channel()
     
-    # Create queue named "ABC" if it doesn't exist
+    
     channel.queue_declare(queue='ABC')
     
-    # Set quality of service to process only one message at a time
+    
     channel.basic_qos(prefetch_count=1)
     
-    # Set up callback for when a message is received
+    
     channel.basic_consume(
         queue='ABC',
         on_message_callback=callback

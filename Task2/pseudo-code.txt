@@ -1,0 +1,18 @@
+for monitroring the cpu usuage : 
+
+run the command top in batch on linux OS for getting a snapshot of cpu statistics 
+extract the ling containing CPU usuage information 
+parse the idle percentage from this line 
+calculate the active CPU usage
+use the command printf to round the CPU usage value to the nearest whole number 
+define CPU threhold value ( in our case 80%) that will trigger the alert 
+print the current cpu usage percentage to the terminal 
+compare CPU usage with the Threshold
+using if statment for testing the CPU usage if it exceed the threshold create a log to /var/log/syslog using logger 
+print the alert message to the terminal 
+if the threshold not excced using else to print a message that indicating the CPU usuage is within normal limits 
+after checking the script and it work insert it as a cronjob to cronjob -e for runing every X times 
+
+
+there is another way to do it in linux OS , we can use python in linux to create service that always run in the systemd,for doing it we will need to create a systemd service file and insert our python script there 
+then reload the systemd. 
